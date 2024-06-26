@@ -10,7 +10,7 @@ variable "APP" {
 }
 
 variable "RELEASE" {
-    default = "1.0.0"
+    default = "1.1.0"
 }
 
 variable "CU_VERSION" {
@@ -42,7 +42,7 @@ target "default" {
         INDEX_URL = "https://download.pytorch.org/whl/cu${CU_VERSION}"
         TORCH_VERSION = "${TORCH_VERSION}+cu${CU_VERSION}"
         XFORMERS_VERSION = "0.0.25.post1"
-        HALLO_COMMIT = "e12f2303bc59858116f5fe129c2ce2b1a6e9ac0f"
+        HALLO_COMMIT = "cfd181598db0bfb79b37bf16bd4e1df7c19accdb"
         VENV_PATH = "/workspace/venvs/${APP}"
     }
 }
