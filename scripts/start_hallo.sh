@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Starting hallo"
-VENV_PATH=$(cat /workspace/hallo/venv_path)
-source ${VENV_PATH}/bin/activate
+source /venv/bin/activate
 cd /workspace/hallo
 TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
 export LD_PRELOAD="${TCMALLOC}"

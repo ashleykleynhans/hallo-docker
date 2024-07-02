@@ -22,7 +22,7 @@ variable "BASE_IMAGE_REPOSITORY" {
 }
 
 variable "BASE_IMAGE_VERSION" {
-    default = "1.6.0"
+    default = "1.7.0"
 }
 
 variable "CUDA_VERSION" {
@@ -42,7 +42,6 @@ target "default" {
         INDEX_URL = "https://download.pytorch.org/whl/cu${CU_VERSION}"
         TORCH_VERSION = "${TORCH_VERSION}+cu${CU_VERSION}"
         XFORMERS_VERSION = "0.0.25.post1"
-        HALLO_COMMIT = "cfd181598db0bfb79b37bf16bd4e1df7c19accdb"
-        VENV_PATH = "/workspace/venvs/${APP}"
+        HALLO_VERSION = "v1.0.0"
     }
 }

@@ -24,7 +24,7 @@ RUN source /venv/bin/activate && \
 ARG HALLO_COMMIT
 RUN git clone https://github.com/fudan-generative-vision/hallo.git && \
     cd /hallo && \
-    git checkout ${HALLO_COMMIT}
+    git checkout ${HALLO_VERSION}
 
 # Install the dependencies for hallo
 WORKDIR /hallo
@@ -50,10 +50,6 @@ COPY nginx/nginx.conf /etc/nginx/nginx.conf
 # Set template version
 ARG RELEASE
 ENV TEMPLATE_VERSION=${RELEASE}
-
-# Set the venv path
-ARG VENV_PATH
-ENV VENV_PATH=${VENV_PATH}
 
 # Copy the scripts
 WORKDIR /
